@@ -1,0 +1,963 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: black;
+}
+
+
+.Home{
+    height:100vh;
+    /* background-color: rgb(116, 29, 29); */
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    /* background-color: rgb(170, 157, 157); */
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background-color: white;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: start;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+/*................ logo .............. */
+.logo{
+    /* background-color: aqua;  */
+    
+   
+}
+.logo h1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.logo h1 span{
+    color: rgb(255, 12, 73);
+}
+/*................ logo .............. */
+
+
+/*................ nav links.............. */
+
+.nav-links{
+    width: 400px;
+    
+    /* background-color: brown; */
+}
+.nav-links ul {
+ 
+   /* background-color:blue; */
+   display: flex;
+   justify-content: space-evenly;
+   
+    
+     
+}
+.nav-links ul li a {
+
+   text-decoration: none;
+   position: relative;
+   padding-bottom: 5px;
+   color: rgb(0, 0, 0);
+   font-size: 18px;
+   
+}
+.nav-links ul li   {
+
+    list-style: none;
+    
+ }
+ .nav-links ul li .active::after{
+    content:"" ;
+    width: 100%;
+    position: absolute;
+    height:0;
+    display: block;
+    top: 100%;
+    left: 0;
+    background-color: brown;
+    padding-top: 2px;
+    transition: 1s;
+ }
+ 
+ .nav-links ul li a::after{
+    content:"" ;
+    width: 0;
+    position: absolute;
+    height:0;
+    display: block;
+    top: 100%;
+    left: 0;
+    background-color: brown;
+    padding-top: 2px;
+    transition: 1s;
+    
+     }
+     .nav-links ul li a:hover::after{
+        width: 100%;
+     }
+ /*................ nav links.............. */
+ 
+/* //////////HOME CONTAINER//////////////// */
+.Home-container{
+    background-color: rgba(236, 232, 232, 0);
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+     background-color: rgb(238, 238, 238); 
+}
+.text{
+    /* background-color: rgb(238, 238, 238); */
+    padding-bottom: 50px;
+    padding-left: 30px;
+    
+}
+.text h2{
+    font-size: 40PX;
+    font-family: cursive;
+}
+.text p{
+    font-size: 20px;
+    color:rgb(155, 151, 151);
+}
+
+.Home-container .img {
+    perspective: 1000px; 
+    cursor: pointer;
+}
+
+.Home-container .img img {
+    width: 80%;
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.Home-container .img:hover img {
+    transform: rotateX(10deg) rotateY(-10deg) scale(1.05); 
+    filter: brightness(1.1); 
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-around;
+    justify-content: first baseline;
+    /* background-color: brown; */
+    align-items: center;
+    width: 45%;
+    padding-top: 50px;
+}
+.watch{
+    /* background-color: blueviolet; */
+    min-height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.text-watch{
+    margin-left: 20px;
+}
+.watch a img{
+    width: 100%;
+    min-height: 20px;
+}
+.text button{
+    background-color: rgb(179, 29, 29);
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    height: 40px;
+    display:inline-block;
+    text-align: center;
+    border:  solid rgb(219, 35, 35) 2px;
+    cursor: pointer;
+    border-radius: 20%;
+   
+    
+
+}
+.text button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ////////////////////////////////////////////////////// */
+.Chefs{
+    /* background-color: brown; */
+    min-height: 400px;
+    
+}
+.Chefs-title{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    line-height: 2px;
+    
+}
+.Chefs-title h2{
+    font-size: 17px;
+    color: rgb(211, 199, 199);
+}
+.Chefs-title  p{
+    color: black;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Chefs-title p span{
+    color: brown;
+}
+.Chefs-container{
+    /* background-color: blue; */
+    min-height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    
+
+}
+.chef1{
+    
+    min-height: 500px;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    border: 5px solid rgb(255, 255, 255);
+    transition: 1s;
+    
+    
+    
+}
+
+.chef1 img{
+    height: 300px;
+    width: 100%;
+    transition: 5s;
+
+    
+}
+.chef1 .drob{
+position: absolute;
+height: 200px;
+background-color: rgb(32, 18, 18);
+top: 0;
+right: 0;
+display: none;
+transition-delay: 1s;
+transition: 3s;
+
+
+}
+.chef1:hover .drob {
+    display: block;
+
+}
+
+
+.chef1:hover{
+    scale: 1.1;
+    
+}
+/* ////////////////////////////////////////////// */
+.Gallery{
+    background-color: rgb(238, 238, 238); 
+
+    min-height: 1200px;
+    margin-top: 40px;
+}
+.Gallery .Gallery-title{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 2px;
+}
+.Gallery-title h2{
+    color: rgb(185, 178, 178);
+    font-size: 16px;
+}
+.Gallery-title h3{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+.Gallery-title h3 span{
+    color: brown;
+}
+.gallery-container{
+    /* background-color: aqua; */
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    
+    
+}
+.gallery-container .container-pizza{
+    
+    min-height: 400px;
+    width: 27%;
+    padding-top: 100px;
+}
+.container-pizza .pizza1{
+    min-height: 50px;
+    width: 90%;
+    position: relative;
+}
+.pizza1 img{
+    width: 100%;
+    min-height: 50px;
+}
+/* /.... */
+.container-pizza .pizza2{
+    width: 90%;
+    min-height: 400px;
+    margin-top: 30px;
+    position: relative;
+}
+.pizza2 img{
+    width: 100%;
+    min-height: 400px;
+}
+/* ........ */
+.beef-container{
+    min-height: 300px;
+    width: 27%;
+    padding-top: 100px;
+    
+
+}
+.beef-container .beef1{
+    min-height: 500px;
+    position: relative;
+
+}
+.beef1 img{
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+}
+
+.beef2 {
+height: 300px;
+    margin-top: 30px;
+    position: relative;
+}
+.beef2 img{
+    width: 100%;
+    height: 100%;
+}
+/*........ */
+.Burger-container{
+     
+     min-height: 300px;
+     width: 27%;
+     
+     padding-top: 100px;
+     
+}
+.Burger1{
+    width: 90%;
+    min-height: 25%;
+    margin: auto;
+    position: relative;
+}
+.Burger1 img{
+    width: 100%;
+    height: 100%
+}
+.Burger3{
+    width: 90%;
+    height: 340px;
+    margin: auto;
+    position: relative;
+}
+.Burger3 img{
+    width: 100%;
+    height: 100%;
+    
+    
+}
+/* /////hover */
+.drobb{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    transition: .5s;
+    opacity: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
+}
+ .pizza1 .drobb  h2{
+margin-top:70px;
+color: white;
+font-size: 20px;
+text-align: center;
+}
+
+.pizza1:hover .drobb{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.pizza2:hover .drobb{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.pizza2 .drobb  h2{
+    margin-top:170px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    }
+
+
+.beef1:hover .drobb{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.beef1 .drobb  h2{
+    margin-top:200px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    }
+.beef2:hover .drobb{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.beef2 .drobb  h2{
+    margin-top:100px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    }
+
+.Burger1:hover .drobb{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.Burger1 .drobb  h2{
+    margin-top:70px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    }
+.Burger3:hover .drobb{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.Burger3 .drobb  h2{
+    margin-top:100px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    }
+    .drobb p{
+        color: white;
+    }
+    /* ///////////////////////////////////////////////// */
+     .contact{
+        min-height: 200px;
+        margin-top: 50px;
+     } 
+     .contact .contact-container{
+        /* background-color: rgb(167, 150, 150); */
+        min-height: 700px;
+     }
+     .Contact-title{
+        min-height: 100px;
+    
+        text-align: center;
+        padding-top: 50px;
+     }
+     .Contact-title h2{
+        color: rgb(185, 178, 178);
+        font-size: 16px;
+     }
+     .Contact-title h3{
+        font-size: 25px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        
+    
+     }
+     
+       .Contact-title h3 span{
+        color: brown;
+       }
+       .map{
+        min-height: 400px;
+        width: 80%;
+        margin: auto;
+        
+        
+       }
+       
+       iframe{
+        width: 100%;
+        height: 300px;
+        margin-top: 30px;
+        
+       }
+       .details{
+        
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: auto;
+
+       }
+      .details .details1{
+        background-color:rgb(245, 245, 245);
+        height: 100px;
+        width: 45%;
+        display: flex;
+    justify-content: flex-start;
+       }
+       .details .img-details{
+        width: fit-content;
+        /* padding-top: 20px; */
+       }
+       .details.text-details{
+        line-height: 2px;
+        margin-left: 20px;
+       }
+       /* ///////////// */
+       .details-two{
+        
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+       }
+       .details-two .details1{
+        background-color:rgb(245, 245, 245);
+        height: 100px;
+        width: 45%;
+        display: flex;
+    justify-content: flex-start;
+       }
+       .details-two .img-details{
+        width: fit-content;
+       }
+       .details-two.text-details{
+        line-height: 1px;
+        margin-left: 20px;
+       }
+
+       .text-details h2{
+        color: rgb(143, 136, 136);
+        line-height: 2px;
+
+       }
+       .text-details p{
+        font-size: 20px;
+       }
+     
+       form {
+        max-width: 600px; /* Set a max width for the form */
+        margin: auto; /* Center the form */
+        padding: 20px; /* Padding around the form */
+        background-color: #f9f9f9; /* Light background */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding-top: 100px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px; /* Space between fields */
+    }
+    
+    label {
+        display: block; /* Block display for labels */
+        margin-bottom: 5px; /* Space between label and input */
+        font-weight: bold; /* Bold text for labels */
+        color: #333; /* Dark color */
+    }
+    
+    .input1, .input2, .inputsub, textarea {
+        width: 100%; /* Full width */
+        padding: 10px; /* Padding for comfort */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 4px; /* Rounded corners */
+        font-size: 16px; /* Font size */
+        transition: border-color 0.3s; /* Smooth border transition */
+    }
+    
+    .input1:focus, .input2:focus, .inputsub:focus, textarea:focus {
+        border-color: #e71e46; /* Change border color on focus */
+        outline: none; /* Remove default outline */
+    }
+    
+    textarea {
+        height: 100px; /* Fixed height for textarea */
+        resize: none; /* Disable resizing */
+    }
+    
+    .btt {
+        margin-top: 20px; /* Space before the button */
+        width: 50%; /* Full width */
+        height: 40px; /* Fixed height */
+        background-color: #e71e46; /* Button color */
+        border: 1px  solid rgb(87, 32, 32) ;
+        color: white; /* Text color */
+        font-size: 16px; /* Font size */
+        border-radius: 5%; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s; /* Smooth background transition */
+    }
+    
+    .btt:hover {
+        background-color: #c72042; 
+    }
+
+
+
+    footer{
+        background-image: url(../images/black-background-image_2764931.jpg!f305cw);
+        min-height: 300px;
+        background-color: #e71e46;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 30px;
+    }
+    .footer-container{
+        min-height: 300px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        padding-top: 30px;
+    }
+    .mealify{
+        /* background-color: #ccc; */
+        min-height: 300px;
+        width: 300px;
+        color: #ccc;
+        
+    }
+    .logo-footer {
+        display: flex;
+        
+    }
+    .logo-footer span{
+        display: inline-block;
+        padding-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    span .point{
+        color: #e71e46;
+    }
+    .logo-text{
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-justify: newspaper;
+    }
+    .social{
+        min-height: 30px;
+        width: 300px;
+        /* background-color: aqua; */
+        margin: auto;
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+    }
+    .social::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        border: solid rgb(255, 250, 250) 1px;
+        height: 0;
+        width: 300px;
+        left: 0px;
+    }
+    .icons{
+        margin-left: 50px;
+        margin-top: 10px;
+        width: 400px;
+        
+    }
+    .icons span img{
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    /* ...................... */
+    .Subscribe{
+width: 45%;
+    }
+    .Subscribe-text{
+    }
+    .Subscribe-text p{
+    
+        
+        
+    }
+    .Subscribe .inputs{
+        margin: auto;
+    }
+    .inputs input{
+        width: 400px;
+        height: 30px;
+    }
+    .inputs button{
+        background-color: #d80d0d;
+        height: 35px;
+        width: 130px;
+        border: solid 2px #c41212;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+    .links ul{
+        list-style: none;
+        line-height: 30px;
+    }
+    .links ul li{
+        font-size: 17px;;
+        cursor: pointer;
+        
+    }
+    li:hover{
+        background-color: rgba(255, 233, 233, 0.7);
+        margin-left: 10px;
+    }
+    /* ................ */
+    /* Default styles for all devices */
+body {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive styles for smaller devices */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+}
+
+/* Responsive styles for medium-sized devices */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Responsive styles for larger devices */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+   
+   /* //////////////darkmood///////////////////////// */
+   /* Base Styles */
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: black;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Headers */
+h1, h2, h3, h4 {
+    transition: color 0.3s;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: white;
+}
+
+/* Button Styles */
+#toggleButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode button {
+    color: white;
+}
+
+/* General Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Home Section */
+.Home {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: white;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+/* Dark Mode for Navigation */
+body.dark-mode .nav {
+    background-color: #000000; /* Dark background */
+}
+
+/* Logo Styles */
+.logo h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Dark Mode Logo Colors */
+body.dark-mode .logo h1 a {
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Dark Mode Navigation Links */
+body.dark-mode .nav-links ul li a {
+    color: white;
+}
+
+/* Home Container */
+.Home-container {
+    background-color: rgba(238, 238, 238);
+}
+
+body.dark-mode .Home-container {
+    background-color: rgba(18, 18, 18, 0.9); /* Dark background */
+}
+
+/* Text Styles */
+.text p {
+    color: rgb(155, 151, 151);
+}
+
+/* Dark Mode Text Colors */
+body.dark-mode .text p {
+    color: #ccc; /* Lighter text */
+}
+
+/* Chefs Section */
+.Chefs-title p {
+    color: black;
+}
+
+body.dark-mode .Chefs-title p {
+    color: white;
+}
+
+/* Gallery Section */
+.Gallery {
+    background-color: rgb(238, 238, 238);
+}
+
+body.dark-mode .Gallery {
+    background-color: #222; /* Dark background */
+}
+
+/* Contact Section */
+.contact {
+    min-height: 200px;
+    margin-top: 50px;
+}
+
+body.dark-mode .contact {
+    background-color: #333; /* Dark background */
+}
+
+/* Footer */
+footer {
+    background-color: #e71e46;
+}
+
+body.dark-mode footer {
+    background-color: #111; /* Dark footer */
+    color: white;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Additional responsive styles for dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: white;
+}
+
+body.dark-mode .details1{
+    background-color: #333;
+
+}
